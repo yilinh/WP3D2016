@@ -1,0 +1,10 @@
+*.aux
+*.blg
+*.out
+*.gz
+*.bak
+*.log
+*.toc
+*.txss
+/auto/**
+*.bbl
