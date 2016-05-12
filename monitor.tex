@@ -1,0 +1,101 @@
+
+
+\section{WP3 Tasks and Open Issues} 
+%\section{Towards Automated Energy Markets}
+
+There are five tasks in WP3 that align with the main object of the work package: 
+\begin{itemize}
+\item Task 3.1 Community management (t02-t36); 
+\item Task 3.2 Energy prosumer profiling (t02-t20); 
+\item Task 3.3 Interface with system level (t02-t08); 
+\item Task 3.4 Energy service context (t02-t30); 
+\item Task 3.5 Service agreement negotiation, monitoring and enforcement (t02-t36). 
+\end{itemize}
+
+The content related to tasks 3.1 and 3.2 is discussed in the previous two sections. Community management and energy prosumer profiling are well addressed by the CIVIS platform features. The interface with system level (Task 3.3) connects WP3 back-end with WP4 back-end; see Figure~\ref{fig:platform} CIVIS platform overview. The SSL (Secure Sockets Layer) connection to the WP3 REST API back-end (hosted at {\small \url{http://civis.tbm.tudelft.nl}}) is set up and the documentation is at  {\small \url{http://civis.tbm.tudelft.nl/apidoc}}. The information about the WP4 API can be found in D4.3. 
+Task 3.4 Energy service context explores issues related to new style business models in the social power grid. The details are discussed in D6.2. 
+
+The assumption of Task 3.5 (service agreement negotiation, monitoring and enforcement) is that prosumers can directly provide (surplus) energy to one another without any intervention by the government or local DSOs. 
+Due to regulatory and administrative constraints in Europe, it is currently not possible to sell
+self-generated energy directly to other consumers; see
+e.g.~\cite{agentschap2012zonnestroom}, \cite{menges2003supporting} and \cite{anaya2015integrating}.
+Therefore, relevant features can not be tested at the CIVIS test sites and are not included or implemented in the CIVIS platform. 
+
+In the following, we briefly discuss a number of energy provision service agreement concepts based on literature and the state of the art. This may serve as a direction for future research. 
+To enable local prosumer energy trade (e.g., household production of surplus solar or wind energy), an energy market mechanism is needed. Since it is not realistic nor practical to have users interact among
+themselves (in person), we assume that each user is 
+represented by a software agent that negotiates on behalf of the user \citep[e.g.][]{wooldridge1995intelligent}
+% Agent technology is applied to the energy market to assist human actors with 
+to monitor and respond to real-time information quickly
+and efficiently. %  Removing the need for constant human interaction makes it possible to increase the speed and frequency of market interactions. 
+%In addition, intelligent automation is often able to react faster than humans in complex, dynamic systems that may be difficult for humans to understand and follow. Another crucial market process is negotiation. 
+%After a consumer (agent) discovers a provider with a particular service (e.g.\ wind energy), the two participants attempt to reach an agreement regarding the terms and conditions of the service, including price and Quality of Service (QoS) (e.g.\ uptime, time to repair an outage, minimum green percentage).
+
+A software agent can represent an energy consumer and/or
+a provider -- both small local providers of renewable energy as
+well as more traditional large scale producers of coal/gas, nuclear or
+hydro based energy. %All residential consumers are represented by their own agent. 
+The agent requires access to a user's personal preferences such as preferred local
+  producers or energy sources (e.g., solar, wind, biomass or
+  nuclear), and can negotiate according to predefined decision rules and historical information. 
+ % 
+%  Internal decision rules allow this agent to access a given
+%situation (e.g.\ evaluate an offer) and take action (e.g.\ reject the
+%offer). An important instance of decision rules is the \textit{negotiation
+%  strategy}. This strategy guides the negotiation process and
+%determines when to accept, reject or counter an offer. The agent also
+%requires (access to) information regarding the consumer's historical
+%energy usage. This information influences the negotiation strategy.
+%
+The agent may also have a certain degree of control over a household's `smart' appliances, such as refrigerators or
+clothes dryers, according to priority rules and specific requirements.
+%At a minimum, the agent must be able to monitor energy usage, turn on and turn off the appliance via some type of network. Additional intelligence indicates priorities and special requirements of individual appliances. 
+For instance, a refrigerator may safely be turned off for a short
+period of time without serious consequences. However, it may be unacceptable if
+the television were to turn off in the middle of a show.
+% 
+%A consumer (software) agent finds the best deal among energy providers, given a
+%set of preferences. An example of preferences could be (1) minimize
+%price and (2) maximize green energy. The consumer agent surveys the
+%marketplace to find providers offering suitable services. If one or
+%more suitable providers are found, the agent negotiates the terms and
+%conditions of service with the selected provider(s). If an agreement
+%is reached an Service Level Agreement (SLA) is created: a contract
+%that states which energy type is provided, how much energy is provided
+%and how long the SLA is valid. The provider then begins service
+%provisioning. During the lifetime of the agreement, the agent monitors
+%the service to ensure that the terms and conditions are met. The
+%monitoring process builds a secure audit log of all transactions, see
+%e.g.~\cite{clark2010secure,rana2008monitoring}. If a violation is
+%detected, penalties are applied. In the case of a dispute, the audit
+%log is consulted to resolve the conflict and advise appropriate
+%action. The entire process is repeated regularly (e.g.\ every hour) to
+%ensure a consumer has the best price and service.
+% 
+An agent can also act as a smart energy gateway for, e.g., a residential building %This agent interacts directly with agents that represent producers of energy. 
+or a community. 
+%Moreover, agents can
+%also represent a whole community. 
+Such aggregator agents represent all
+local agents and provide a uniform interface to the outside world. For example, a community with surplus energy can form a virtual power plant, see e.g.~\cite{pudjianto2007virtual}, and
+sell the energy directly to the market. In the CIVIS
+philosophy, revenue provided by selling surplus energy can then be
+used to strengthen the social cohesion of the community.
+
+Software agents that represent households or communities can
+ be integrated with %energy management 
+systems such as the
+CIVIS platform. %. Agents can communicate with the apps
+This can provide users information about energy markets, e.g. whether they are 
+selling surplus energy on the open market or locally to their
+neighbors, etc.
+We refer to~\cite{clark2014a} and \cite{clark2014b} for more discussions
+of this topic, including a technical proposal for a negotiation and
+monitoring framework for energy provisioning based on the
+WS-Agreements Negotiation standard proposed by~\cite{waeldrich2011ws}.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

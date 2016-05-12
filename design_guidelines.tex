@@ -1,0 +1,179 @@
+\subsection{Design Guidelines and Ideas} 
+
+Diving deeper into these interrelated analytical frames, there are many finer design issues that can be explored, e.g., what is a good way to present users with energy information and feedback, and how this could affect users' energy behavior. There is a rich body of literature on this topic. In this subsection, we give a detailed account of the guidelines we adopted for the CIVIS application design, and the design ideas derived from our design experience. These guidelines and ideas can also be relevant to the design of other eco-feedback applications. 
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+	
+	\item \textbf{Show feedback related to intrinsic and altruistic values rather than extrinsic values --- except when the goal is to motivate one-time behavior change where extrinsic motivation may be more useful. }
+		\begin{itemize}
+		\item Intrinsic motivation, e.g. interest, curiosity, competence and enjoyment, is more likely to result in \textit{long-term} behaviour change compared to extrinsic motivation, e.g. game-like or material incentives, or social reinforcement \citep{He2010}. 
+		
+		\item In a study of 118 households in the US over 100 days \citep{Asensio2015}, participants who received feedback about energy use on appliance level together with information about health and environmental impact related to energy use reduced their energy use with 8.2\%. The group that received the same feedback together with information about monetary savings did not make any significant savings over the period.
+		
+		\item Intrinsic values are correlated with sustainable behaviours while extrinsic values are negatively correlated. Triggering these values also has spillover effects --- if users adopt sustainable practices related to energy they are more likely to also adopt other sustainable practices (and in the same way with extrinsic values) \citep{Knowles2014}.
+		\item Personalisation of the interface and information increases the user's intrinsic motivation, which makes durable behaviour change more likely \citep{He2010}. 
+		
+		\item Cost focus resulted in underestimation of the effectiveness of efforts to reduce energy consumption because of fluctuating energy prices \citep{Froehlich2009}
+		
+		\item A qualitative study with 15 participants (12 households) in the US \citep{Pierce2010} shows that people did not care much about cost feedback or thought it would make them change behaviours. ``Awareness of relatively low costs of appliance use may actually be a disincentive to conserve.'' Many of the participants did not know how much they pay per month for energy and none of them knew the cost per kWh or what type of contract they had. 
+		
+		\item Match motivators with behaviors and audiences --- especially match external motives (extrinsic) with one-time behavior change, and internal motives (intrinsic) with routine behaviors to promote positive behavioral spillover. Extrinsic motivators can motivate energy conservation, particularly for one-time behaviors.  However, behaviors that must be repeated will likely stop, once the external incentive is removed. External motivators may even inadvertently increase self-centered behaviors over pro-environmental behaviors \citep{Swim2014}.
+		
+		\item People appear to prefer being ``green'' to being ``greedy'' \citep{Swim2014}. 
+		\end{itemize}		
+		
+	Design ideas/comments:
+		\begin{itemize}
+		\item No cost feedback. In case we want the users to be able to donate money or associate the effect of behavior changes with savings, we can present the savings as something else (e.g. number of solar lamps it corresponds to in terms of cost). 
+		\item Users are the experts of their own reality. In giving personalized information and feedback, we can ask users about their needs and what would fit their needs in everyday life. 
+		\end{itemize}
+	
+	\item \textbf{Use tangible units to describe energy or consumption. }
+			\begin{itemize}
+			
+			\item General users have difficulties understanding energy when presented in kilowatt hours (kWh) and water in cubic centimetres (CCM) \citep{Froehlich2009}. 
+			
+			\item In a study of 17 (mainly young and male) individuals receiving energy feedback they liked explanatory comparisons, showing energy use as number of laptops and CO$_{2}$ exhaust as number of trees, and would like more such comparisons \citep{Petkov2011}. 
+			\end{itemize}
+			
+			Design ideas/comments:
+				\begin{itemize}
+				\item Compare energy use to, e.g., driving $x$ km with a car, energy for producing a new TV, energy for powering a ``good cause'', or energy related to selected saving tips.
+				\end{itemize}
+				
+	\item \textbf{Present real-time consumption information carefully to avoid misinterpretation. }
+			\begin{itemize}
+			\item People may misinterpret real-time electricity feedback (e.g., ``traffic light'' feedback of current power use). Some think that appliances that have a high power use (even if used only for short times) are the ones with highest energy consumption \citep{Strengers2011}.
+			\end{itemize}
+			
+			Design ideas/comments:
+				\begin{itemize}
+				\item Do not show real-time consumption (unless the goal is to support load-shifting). 
+				\end{itemize}
+
+	\item \textbf{Compare to similar households and/or individuals. }
+	
+			\begin{itemize}
+			\item In a study of about 170,000 American households who received feedback on home electricity and gas consumption with peer comparison \citep{Ayres2013}, feedback was provided by mail monthly or quarterly from the company \textit{oPower} and included both descriptive norms and injunctive norms. Average energy reduction was 1.2\%-2.1\% measured over a period of 12 or 7 months. 
+			
+			\item Injunctive norms (norms that express social values rather than actual behaviour, e.g. happy/sad smileys) are said to be able to mitigate the boomerang effect \citep{Schultz2007}.  The authors demonstrate the ``boomerang effect'' of descriptive norm feedback -- those who receive feedback that they are saving more energy than others tend to increase (rather than decrease) their energy use. In the case of \textit{oPower}, the injunctive feedback (``great, good, below average'' -- all with smiley faces) doesn't make a significant difference \citep{Allcott2011}. The author suggests that the feedback in the study affected all three categories equally. The average energy reduction in the study was 2\% and high-consumption users had the highest decrease but low-consumption users didn't increase use. The study also adds to the growing appreciation of how non-price interventions can affect consumer behavior. 
+			
+			\item Environmental decision-making can be supported by comparisons with similar groups \citep{Dietz2015}.
+			 
+			\item Social influence: A more potent strategy than social norms is to increase the visibility of people who are already engaging in the desired behavior. This strategy is most effective when campaigns highlight people who appear similar to the target audience, or better yet, those who have personal connections to the target audience (e.g., group leaders in residential areas as role models) or people that the target audience affectively identifies with \citep{Abrahamse2013}. Highlighting well-connected, high-status individuals increases the likelihood that the behavior will spread to others in their social networks \citep{Wejnert2002}.
+			
+%			\item 5 oPower ``universal'' truths (\href{http://www.opower.com/fivetruths}{http://www.opower.com/fivetruths}):
+%			(1) Utilities are not meeting customer expectations
+%			(2) Everyone wants lower bills
+%			(3) People look to utilities for energy information
+%			(4) Customers value personalized energy insights
+%			(5) Everyone wants to know how they measure up. 
+			
+			\item People saved the most energy if the message they received appealed to them to ``join your neighbors'' in saving energy (implying a norm of energy saving among neighbors), in contrast to other messages that appealed to save the environment or save money \citep{Nolan2008}.
+			Consistently across the studies that concern the process of social influence, participants rate normative messages as the least effective and believe that they are not influenced by their perceptions of others. But the data shows otherwise: normative messages can be a powerful lever of persuasion but that their influence is underdetected \citep{Nolan2008}. 			
+			\end{itemize}
+			Design ideas/comments:			
+			\begin{itemize}
+			\item 	Finding social referents or community role-models to help promote social norm and influence behavior of others.
+			\end{itemize}
+			
+	\item 	\textbf{Conformity to social norms can occur outside of awareness. }
+			\begin{itemize}
+			\item The normative influence is generally not detected. Social norms have powerful, and often unappreciated, influence on everyday behavior decision \citep{McDonald2015}. 
+			\item It is common practice for program designers to conduct focus groups in the process of designing their behavior change programs. The problem is that asking people what they think would influence them may not provide good data on which to base solutions. In fact, the results suggest that people hold incorrect beliefs about what motivates them to conserve and may not be able to predict which strategies will be the most effective \citep{Nolan2008}. 
+			\end{itemize}
+			
+			Design ideas/comments:					
+			\begin{itemize}
+			\item 	It is not always correct to listen to what people say will motivate them to conserve. Sometimes other motivation we provide will actually be more effective, even though they think that they are not influenced by such motives. 
+			\end{itemize}
+			
+	\item \textbf{Stimulate self-investment of group members. }
+				\begin{itemize}
+				\item \citet{Masson2014} studied whether people join endeavors to mitigate climate
+				change only because they perceive themselves to be similar to other people in a coherent group (``self-definition'') or whether they need to be affectively and motivationally invested in their group (``self-investment''\footnote{Self-investment relates  to a person's positive feelings about the ingroup (group satisfaction), the importance of the group membership for the self (group centrality) and to a sense of connectedness with the group (group solidarity) \citep{Masson2014}.}). 
+				The results show that those who were highly self-invested in a social identity adopted climate friendly ingroup norms as a guide for their own everyday behavior  intentions, whereas merely cognitive self-definition as a group member was not sufficient to increase normative pro-climate action. 
+				
+				\item The above study also suggests that the effects of self-investment on norm
+				conformity were stronger for a high-cost behavior than for a low-cost behaviour, indicating that social identities gain  predictive power if norm adherence is perceived as relatively	costly for the individual. Engaging  in climate-protective behavior that is less costly and therefore
+				more socially prevalent (e.g. switching off electronic appliances when not in use) provides only limited possibilities for identity expression. 
+				\end{itemize}
+				
+				Design ideas/comments:					
+				\begin{itemize}
+				\item Behavior change interventions can be designed to consider different group memberships. 
+				\item Provide pro-environmental behavior suggestions with suitable cost-levels to group members. The cost-level here does not refer to monetary cost but self-investment. Ask people for feedback about whether certain behaviors are too costly (difficult) or too effortless (easy) for them.
+				\end{itemize}
+				
+				
+		\item \textbf{Make challenges feasible to follow through micro-actions (and make non-desirable behavior harder). }
+				\begin{itemize}
+				\item Prompts (contextually implied calls for micro-actions) are another way to effectively provide information about what to do. Prompts, such as reminders to defrost fridge, are essentially reminders to perform the given behavior at the time of making the decision \citep{Bator2014, Schultz2014}.
+				
+				\item Insufficient finances, lack of time, and the complexity of the behavior are three common obstacles for people to change behavior \citep{Fogg2009}. 
+				
+	%			\item Making the desired behavior the ``default'' makes this behavior easier and the less desired behavior more difficult. For instance, requiring people to opt-out of having their energy come from renewable energy sources results in more people receiving energy from these sources than having them opt-in to these sources \citep{Pichert2008}.
+			
+				\end{itemize}
+				
+				Design ideas/comments:					
+				\begin{itemize}
+				\item Provide pro-environmental behaviors suggestions that are feasible to follow in everyday life. This means the monetary cost and effort need to be well considered to make the suggestion practical to implement. 
+				\item Indicate the potential effort of each suggestion.
+				\end{itemize}			 
+					
+	\item \textbf{Provide information on how different practices are related to energy use (and challenge existing norms).}
+				\begin{itemize}
+				\item People don't necessarily interpret eco-feedback in a ``logical'' way. They might only focus on actions that have a low impact because these are typically associated with being sustainable.  
+				Rather than identifying the most resource-intensive practices and changing them, householders often interpret ``eco'' within a normative framework (about what it means to be green or sustainable) --- undertaking actions such as turning off appliances when not in use, buying more efficient appliances, shortening showers, washing full loads of laundry, and changing light bulbs \citep{Strengers2011}. 
+				\item Eco-feedback might involve practical recommendations that lead to new practices which challenge taken-for-granted notions of normality \citep{Strengers2011}.
+				\item Environmental decision-making can be supported by information on what behaviours matter \citep{Dietz2015}.
+				\item Targeted energy conservations tips may reduce the boomerang effect \citep{Allcott2011}.
+				\item Awareness and knowledge does not necessary mean that people will adopt pro-environmental behaviours \citep{Kollmuss2002}. 
+				\item A review of research on eco-feedback shows that the vast majority of tools aim to change routine behaviours rather than addressing one-time actions with long-term effects \citep{Froehlich2009}, even though some one-time actions are claimed to have higher energy reduction potential \citep{Gardner2008}. 
+				\end{itemize}
+				
+				Design ideas/comments:
+				\begin{itemize}
+				\item Include both suggestions for changing routine behaviours and for taking one-time actions.
+				\item Make suggestions comparable by indicating the potential impact of each suggestion.
+				\end{itemize}
+
+				
+	\item \textbf{Engage all members of the household. }
+			\begin{itemize}
+			\item Eco-feedback technologies are typically designed for ``resource managers'', often men, although they are far from the only users of energy in a household \citep{Strengers2014}. 
+			\end{itemize}
+
+			Design ideas/comments:
+			\begin{itemize}
+			\item Even if only one account is created per ``energy contract'' or household, a user can add family members or flat/house-mates so that they can have their own sub-accounts since household energy consumption is the result of joint efforts. 
+			\item Household members could have a big picture of how they are doing in energy consumption.
+			\end{itemize}
+
+	\item \textbf{Provide users with means for reflection. }
+				\begin{itemize}
+				\item Persuasive technologies that promote sustainability typically predefine what is sustainable and what should be achieved. The user should be provided with means to reflect on their practices \citep{Brynjarsdottir2012}. 
+				\end{itemize}
+
+				Design ideas/comments:
+				\begin{itemize}
+				\item Encourage users to evaluate the suggestions. How did they think it went? What was the effort-level for following the suggestions? 
+				\item Encourage users to give comments and feedback about the application in general. 
+				\end{itemize}
+				
+	\item \textbf{Design for actors beyond the individual, who have the power to significantly influence energy use or practices related to energy use. }
+				\begin{itemize}
+				\item Reviews of eco-feedback research concludes that there is a strong focus on targeting behaviors related to domestic electricity use \citep{Pierce2012,Froehlich2010}. 
+				\item At the same time, in the Nordic countries, heating and hot water constitute the greatest part of the  domestic energy use. For households living in apartment buildings it may be hard to individually address causes of ``wasted'' heat and hot water, it often has to be managed on a building level \citep{Hasselqvist2015}.
+				\item One suggestion for how to increase the effectiveness 
+				%as a means of sustainable practices 
+				is to not only target individuals but also organisations, companies and policy makers \citep{Brynjarsdottir2012}.
+				\end{itemize}
+
+				Design ideas/comments:
+				\begin{itemize}
+				\item For the Stockholm test site Hammarby Sjöstad (that only has apartment buildings), provide support for housing cooperatives (primarily board members and energy managers) to address issues and possibilities of collective energy use in the building, e.g. related to improving the heating systems. 
+				\end{itemize}
+
+\end{enumerate}

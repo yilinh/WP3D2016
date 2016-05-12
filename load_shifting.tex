@@ -1,0 +1,53 @@
+\subsubsection{Energy Data Visualization and Comparison (Both Test Sites)} 
+\label{sect:load_shifting}
+
+
+
+\paragraph{Design Concept} 
+
+CIVIS aims at enabling an informed approach to ``fair energy use'', where people are conscious of their individual energy footprint and the resulting impact. In this respect, the CIVIS app design includes means for users to visualize in an easily understandable and actionable way their energy consumption level, in line with the requirements analysed in D3.1. While there is a wide debate about the direct impact of such type of measures, with reported reductions ranging from 2\% to 20+\% \citep{eea_report}, it is nonetheless undeniable that making such information accessible to the user represents a key step towards the long-term adoption of more sustainable behaviors. 
+% 
+Three different levels at which energy consumption data is aggregated are used in the app: household, appliance and community. All data is fetched by the app from the back-end, which in turns receives such data from the WP4 platform. 
+
+
+At the household level the current consumption level, together with (historical) consumption patterns are displayed. For users with production from renewable sources\footnote{This applies in particular to users from the two Trentino pilot sites, where a significant fraction of the users have roof-installed PV plants.} the app compares production and consumption behaviors, with the aim of raising awareness of the different periodic patterns and maximizing self-consumption. 
+
+For users with installed smart plugs, the app visualizes consumption patterns at the single appliance level. This is meant to enable users to gain a deeper understanding of the relationship between their daily actions and the resulting energy consumption and CO$_{2}$ footprint. 
+
+At the community level aggregated data is displayed on the energy balance of the ``community'' as a whole\footnote{The concept is slightly different between the pilot sites. In Italy it refers to the whole electric consortium, while in Sweden to the housing cooperative the user belongs to.}. 
+In particular, data on the aggregated monthly consumption and production levels is reported, together with month-over-month trends. The overall balance in terms of the share of energy consumed that has been produced locally through renewable energy sources is also reported. One important aspect in terms of community is the ability to compare a single household's consumption level with a benchmark value\footnote{While in principle homogeneous groups of users could be identified to make the comparison more sound, this requires data (household composition, size of dwelling, type and number of appliances preset, thermal isolation etc.etc.) which is not currently available for the vast majority of the users engaged in the pilot. For this reason the community average is used as a benchmark.}, in line with the principle of normative comparison~\citep{d3.1,cialdini2004}, which is part of the social norm approach frame outlined in the previous sections. This is meant to represent a powerful tool in helping users make sense of the actual consumption data, driving them towards the goal of a ``fair energy use''. At the same time, this can also be seen as a social mechanism, where community-level dynamics are used as a means to achieve a given goal, in this case increased energy efficiency at the single household level.
+
+\paragraph{Dynamic Time-of-Usage Tariffing Scheme (Trento Test Site)}
+In the Trento pilot site the main focus is on leveraging load elasticity for maximizing self-consumption, with the twofold effect of optimizing usage of locally-installed RESs and minimizing dependency from energy markets. This means that electric loads shall be shifted to periods of time characterised by high production from renewable energy sources. In order to achieve such an effect, the lever identified has been that of price, actuated by means of a dynamic time-of-usage tariffing scheme. A predictive engine has been designed and implemented to predict with a good accuracy the level of production from renewables in the subsequent 72 hours. The engine, which is based on a linear prediction model, uses weather forecast data (in particular: solar radiation data) from both public and private sources~\footnote{Data from Meteotrentino (\url{http://www.meteotrentino.it/}), OpenWeatherMap (\url{http://openweathermap.org/}), Fondazione Edmund Mach (\url{http://www.fmach.it/}) and US National Weather Service (\url{http://nomads.ncep.noaa.gov/}) is used in the predictor to build the feature vector.}, and historical data about the production of single renewable plants, provided by local stakeholders CEIS and CEDIS.
+Estimating also consumption patterns, based on historical data (again weighted based on environmental conditions for accounting for climate factors), a matching engine has been developed which forecasts whether there will be surplus of local production. In this case a favorable price is offered to users, as an incentive for them to move flexible loads (e.g., dishwater and washing machine) to those time intervals. At the same time, higher prices will be used to discourage usage of energy-intensive appliances when local production is low compared to consumption requests. In the app this takes the form of an indication of the foreseen price for the next 72 hours, divided into time intervals of three-hours duration each. The indication of the price for each time interval is accompanied by an icon, smiling if the price is below a given threshold (computed based on the historical price of energy in the previous two years) or presenting a sad expression otherwise. As the tariff is based on the estimated energy balance for the consumption as a whole, it is not personalised but it is the same for all local users.
+
+\paragraph{Donation (Trento Test Site)}
+CIVIS users in the Trento test site can sign up for a donation programme, organized as a crowdfunding campaign. Subscription to the donation programme is optional. In case a user signs up, his/her contribution towards a better community energy balance brings about economic benefits for the electric consortia as well. In both Trento test sites, indeed, local generation from RESs exceeds, at the aggregated yearly level, consumption needs. Yet there is a timing mismatch, so that in order to serve consumption peaks the consortia have to buy (expensive) electricity on the national energy market. At the same time there are time periods during which production exceeds consumption, so that excess energy has to be sold, typically at a much lower price, on the market.
+
+The donation mechanism co-designed with the local stakeholder foresees that such economic benefit for the consortia will be partially monetized in order to contribute to a project with a social goal. Each project has a well-defined beneficiary. For a given project the app visualizes, besides the name of the beneficiary and a short description of the project, information on the current status of the campaign, i.e., how much money has been collected with respect to the goal. Also, a plot displaying the trend of donations for that specific campaign since the beginning is plotted.
+
+The donation mechanism, coupled with the dynamic ToU tariffing scheme, is the key 'social' aspect foreseen for the Trento pilot site. It is based on the concept that the adoption of environmentally-friendly behaviors at the individual level can generate positive impacts at the social level ("social as a goal"). In this case impacts are on two different levels. First, in terms of reduced greenhouse gas emissions, as the local generation is totally based on RESs and hence carbon-neutral. Second, by contributing to the funding of a social project users can see a concrete, tangible effect of their action, fostering their motivation. 
+
+The visualization of the donation programme status and trends requires such data to be made available through the WP4 platform.
+
+\paragraph{Design Evaluation}
+The design of the energy data visualization and comparison part has been validated incrementally with users in the Trentino pilot. Two focus groups and four workshops (equally divided between Storo and San Lorenzo test sites) were conducted, see Table~\ref{tab:workshopsTN}\footnote{For more information and detailed reports about the activities conducted with the end-users in Trentino pilot, pleasee see Deliverable 5.2 ``Current public engagement''.}. During the focus group events, ideas about possible CIVIS functionalities were used as probes with the participants. During the workshops, practical activities were carried out with the participants in order to develop an idea of the most desirable features and then to receive evaluation feedback on the proposed mock-ups.
+% 
+One issue that emerged was the interest in the production data and the ability to maximize self-consumption. The idea of the dynamic ToU and of the donation programme were also well received. 
+
+\begin{table}[!htb]
+\centering \small
+\caption{Dates and participant number (except for CIVIS facilitators) for the two focus groups and four workshops run for the co-design of energy visualization. All events lasted approximately 2 hours.}
+\label{tab:workshopsTN}
+\begin{tabular}{|l|l|l|l|}
+\hline
+{\bf Event Type}   & {\bf Date} & {\bf Location} & {\bf Attendance} \\ \hline
+Focus group & 21/01/2015 & San Lorenzo & 10ppl \\ \hline
+Focus group & 24/03/2015 & Storo & 9ppl\\ \hline
+1st workshop & 08/05/2015 & San Lorenzo & 17ppl \\ \hline
+1st workshop &  15/05/2015 & Storo & 7ppl \\ \hline
+2nd workshop & 03/06/2015 & San Lorenzo &  23ppl \\ \hline
+2nd workshop & 05/06/2015 & Storo &  9ppl \\ \hline
+\end{tabular}
+\end{table}
+
