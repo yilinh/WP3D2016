@@ -1,6 +1,6 @@
 \section{CIVIS Platform  Development} 
  
-The development (implementation) of the CIVIS platform was started in May 2015 \citep{Huang2015c} and continued in the third year's WP3 activities. At the time of writing this deliverable (Jun 2016), the development is completed with some minor updates took place in the past month.
+The development of the CIVIS platform started in May 2015 \citep{Huang2015c} and continued in the third year's WP3 activities. At the time of writing this deliverable (May/Jun 2016), the development is completed with minor updates took place in the past month.
 % 
 The JavaScript (JS) programming language\footnote{\url{http://www.crockford.com/javascript/javascript.html}} is used for development at both front- and back-ends. 
 The platforms and technologies mentioned in this section are all free and open source. 
@@ -11,22 +11,21 @@ The CIVIS front-end (YouPower) is developed as a hybrid (cross-platform) mobile 
 % 
 The Ionic framework comes with native-styled mobile UI elements and layouts, and handles the look and feel and the UI interactions the app needs in order to be compelling\footnote{\url{http://ionicframework.com/docs/guide/}}. 
 
-The energy data visualizations are built using the HighCharts library\footnote{\url{http://www.highcharts.com/}}, wrapped using the {\tt highchart-ng} directives for Ionic\footnote{\url{https://github.com/pablojim/highcharts-ng}}.
 
-Angular as a JavaScript framework provides directives (extensions of HTML attributes) and two-way data binding (binds input or output data of the view to a model) that simplify the app development with MVC architecture. The ``Current Actions'' in the ``Action List'', for example, are rendered with the following HTML code: 
 
+Angular as a JavaScript framework provides directives (extensions of HTML attributes) and two-way data binding (binds input or output data of the view to a model) that simplify the app development with Model-View-Controller (MVC) architecture. 
+In two-way data binding, the value of a data model is passed on from the view (or loaded from the back-end) to the controller at run-time, and the function in the controller returns the result (of the value manipulation) to the view. 
 % 
-{\scriptsize  
-\begin{verbatim}
-<div class="...">Current Actions ({{_.size(currentUser.actions.inProgress)}})</div>
-<a class="..." ng-repeat="action in currentUser.actions.inProgress" ng-href="#/app/actions/active/{{$index}}">
-   {{getActionPoints(action)}} {{action.name}}
-</a>
-\end{verbatim}
-}
-% 
-\noindent where {\footnotesize  \verb currentUser.actions.inProgress } is a model of a list ({\footnotesize  \verb array }) of the user's actions (the data) that are dynamically loaded into the corresponding controller from the CIVIS back-end at runtime. 
-The Angular directive  {\footnotesize  \verb ng-repeat } then iterates through the list, takes each element as an  {\footnotesize  \verb action }, and displays the data in the view. The function {\footnotesize \verb getActionPoints(action) } is defined in the controller. It is a good example of two-way data binding where the value of {\footnotesize  \verb action } (the model) is passed on from the view to the controller, and the function returns the result form the controller to the view. 
+The noteworthy JS and Angular libraries we use for the front-end development are as follows:
+\begin{itemize}
+\item Highcharts\footnote{\url{http://www.highcharts.com/}}, a charting library in JS. It provides an easy way to add interactive charts to the application. 
+\item Highcharts-ng\footnote{\url{https://github.com/pablojim/highcharts-ng}}, a simple Angular directive for Highcharts. 
+\item Angular-translate\footnote{\url{https://angular-translate.github.io/}}, an Angular module for internationalization and localization of the application. (YouPower is currently available in English, Swedish and Italian.)
+
+%\item Underscore.js, handy library that extends JavaScript with useful functions. 
+\end{itemize}
+
+
 
 \subsection{CIVIS Back-End}
 
