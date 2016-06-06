@@ -5,6 +5,5 @@
 *.bak
 *.log
 *.toc
-*.txss
 /auto/**
 *.bbl
