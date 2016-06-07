@@ -1,13 +1,18 @@
 
-\subsection{CIVIS Back-End}
+\subsection{CIVIS Back-end as a JS Runtime Environment}
 
-An early version of YouPower\footnote{Branch study-protoype \url{https://github.com/CIVIS-project/YouPower/tree/study-prototype}, 
-\url{https://app.civisproject.eu/frontend.html}} has its back-end on Firebase\footnote{\url{https://youpower.firebaseio.com/}} to have a quick set-up.  
-For the same reason, the YouPower back-end development is first deployed on Heroku\footnote{\url{https://www.heroku.com/}}. In July 2015, TU Delft finished preparing a virtual machine for CIVIS, so the WP3 back-end is currently hosted by a TU Delft server at {\footnotesize\url{http://civis.tbm.tudelft.nl}}. The CIVIS app back-end interacts with the IT platform developed in WP4, from which it fetches relevant data to be used in the front-end. This is particularly relevant for visualization of energy consumption/production data, energy price data and donation programme data. The availability of such data through the WP4 platform represents therefore a pre-condition for the ability of the app to correctly visualize such information.
+The YouPower back-end is developed using the \textit{Node.js}\footnote{\url{https://nodejs.org/}} platform, a well-known JS based open source runtime environment for server-side applications. 
+The platform is easily extensible and has a repository of libraries that support fast web development. 
+% 
+TU Delft prepared a virtual machine for CIVIS to host the WP3 back-end\footnote{\url{http://civis.tbm.tudelft.nl}}
+using \textit{Nginx}\footnote{\url{https://nginx.org/en/}}, an http and reservse proxy server. 
+% 
+A \textit{Comodo}\footnote{\url{https://ssl.comodo.com/}} SSL certificate is installed on the server to provide secure communication (i.e. https). 
 
-The YouPower back-end is developed using the Node.js\footnote{\url{https://nodejs.org/}} platform, a well-known JS based open source runtime environment for server-side applications. 
-The platform is easily extensible and has a repository of libraries that support fast web development.
-MongoDB\footnote{\url{https://mongodb.org/}} is used as the back-end database. It is document-oriented, and has flexible data schema and expressive query language. 
+% 
+The WP3 back-end interacts with the WP4 back-end, from which the former fetches relevant energy data that is particularly relevant for visualization of energy consumption/production and energy consumption signal. The availability of such data through the WP4 platform represents therefore a pre-condition for the ability of the app to correctly visualize such information.
+
+\textit{MongoDB}\footnote{\url{https://mongodb.org/}} is used as the back-end database. It is document-oriented, and has flexible data schema and expressive query language. 
 A list of the data models at the back-end can be found at {\footnotesize\url{https://github.com/CIVIS-project/YouPower/tree/master/backend/models}}. 
 Figure~\ref{fig:datamodel} shows the data model schema.
 %
@@ -18,15 +23,24 @@ Figure~\ref{fig:datamodel} shows the data model schema.
 \label{fig:datamodel}
 \end{figure} 
 % 
+
 The noteworthy Node.js libraries we use for the back-end development are as follows:
+
 \begin{itemize}
+
 \item Async.js\footnote{\url{https://github.com/caolan/async}}, which makes managing and combining asynchronous tasks easier. 
+
 \item Express.js\footnote{\url{http://expressjs.com/}}, a Node.js application server framework we use as a basis for the REST API. 
+
 \item Mocha\footnote{\url{https://mochajs.org/}}, a JavaScript unit test framework. 
+
 \item Mongoose\footnote{\url{http://mongoosejs.com/}}, a MongoDB driver for Node.js. It provides a schema-based solution to model data. 
+
 \item Passport.js\footnote{\url{http://passportjs.org/}}, for handling authentication of REST API requests for Node.js, both local (username password) and Facebook. 
-\item Underscore.js, a handy library that extends JavaScript with some utility functions. 
+
+\item Underscore.js\footnote{\url{http://underscorejs.org/}}, a JS library that provides over 100 utility functions. 
 %\item Ionic Push\footnote{\url{https://apps.ionic.io/landing/push}}, for sending dynamic push notifications. 
+
 \item APIDOC script\footnote{\url{http://apidocjs.com/}}, for inline documentation for the REST API. 
 \end{itemize}
 
