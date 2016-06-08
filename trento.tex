@@ -2,7 +2,7 @@
 
 This part of the application is designed and developed to enable an informed approach to ``fair energy use'' by making people aware of their
 energy behaviors in individual and collective terms. Indeed, it includes means for users to visualize in an easily
-understandable and actionable way a specific set of energy measurements, simple analytics and a time-of-use signal.
+understandable and actionable way a specific set of energy measurements, simple analytics and a time-of-use (ToU) signal.
 
 The access point for this part of the app is the ``Energy Data'' navigation tab (Figure \ref{fig:tab}). This tab gives access to an
 overview of the various functionalities and visualizations of specific information: ``Energy Meteo'', Visualization of consumption and production data (real time and historical),
@@ -34,7 +34,7 @@ well defined individual and collective efforts.
 
 \paragraph{``Energy Meteo'': the Time-of-Use (ToU) signal} 
 It is designed to leverage load elasticity for maximizing self-consumption, with the twofold effect of optimizing usage of locally-installed RESs and minimizing dependency from energy markets. This means that electric loads shall be shifted to periods of time characterized by high local production from renewable energy sources.
-It provides users with a clear indication of the actual status of the local grid: \textit{green smilies} signal slots when local production exceeds demand; \textit{orange smilies} highlight slots
+It provides users with a clear indication of the actual status of the local grid: \textit{green smilies} signal slots when local production exceeds demand; \textit{red smilies} highlight slots
 when demand exceeds local production\footnote{See Deliverable 4.2 \textbf{[NB: VERIFY!!]}, for more details on the technical design and implementation of the predictive model of the ToU signal.}.
 
 \begin{figure}[htb]
@@ -54,7 +54,8 @@ when demand exceeds local production\footnote{See Deliverable 4.2 \textbf{[NB: V
 
 The ToU signal is provided in two distinct ways:
 \begin{description}
- \item[Current.] It is available on the main screen (Figure \ref{fig:overview-tou}-1) and it indicates whether \textit{present} moment is a good or bad moment to consume locally produced electricity.
+ \item[Current.] It is available on the main screen (Figure \ref{fig:overview-tou}-1) and it indicates whether \textit{present} moment is a good (`green smiley') or bad moment (`red smiley')
+ to consume locally produced electricity.
  \item[Forecast.] It is available by clicking on ``Energy Meteo'' field and it provides a detailed overview of the local grid conditions, forecasted in 3-hours time-slots, for the forthcoming 30 hours (Figure \ref{fig:overview-tou}-2). A new forecast is generated every 24 hours.
 \end{description}
 
@@ -82,7 +83,7 @@ household's electric production (Figure \ref{fig:viz_rt}-2).
 These visualizations provide meters for:
 \begin{description}
  \item[Energy.] It is accounted for the most recent 6-10 minutes monitored.
- \item[Power.] It provides instant measurement\footnote{For technical reasons and depending on several environmental factors (\textit{e.g.} households connectivity for transfer of monitored data) there may be up to approximately 2 minutes delay of the actual power measured and the data displayed through You Power.}.
+ \item[Power.] It provides instant measurement\footnote{For technical reasons and depending on several environmental factors (\textit{e.g.} households connectivity for transfer of monitored data) there may be up to approximately 2 minutes delay between the actual power measured and the data displayed through You Power.}.
 \end{description}
 
 
@@ -114,7 +115,7 @@ Selection of data ranges are mandatory for these visualizations. They must be se
 in the `light-bulb' sub-view for the \textit{Appliance} one, which is accessible from the top level bar.
 
 
-\paragraph{Comparisons} 
+\paragraph{Visualization of comparisons} 
 Comparisons are designed to provide users with reference information about energy performances or behaviors in relation to the neighborhoods.
 \begin{figure}[htb]
       \begin{center}
@@ -130,7 +131,7 @@ Comparisons are designed to provide users with reference information about energ
 }
 \label{fig:comparison}
 \end{figure}
-
+There are two type of comparisons that can be visualized through YouPower:
 \begin{description}
  \item[Consumption distribution on ToU signals] It shows a cumulative and progressive distribution of consumption between the green and red ToU signals.
  On the top part it shows the individual household chart, while on the bottom, the community\footnote{In this case community refers to the registered users who 
@@ -144,12 +145,18 @@ These features can be accessed by clicking on the ``community'' icon, which is s
 
 \paragraph{Participatory Budgeting external service} 
 
-This is designed to accompany users along their efforts and process of changing their energy behaviors.
-Particularly, with regards to the collective objective to maximize use of locally produced electricity. A website has been implemented to:
+This external service\footnote{This service was initially expected to be integrated in YouPower. However, due to the delays for the app deployment it was not possible
+to fully develop and integrate it in YouPower. Therefore, similar functionalities have been provided through
+this external service.} and process is designed to accompany users along their efforts of changing their energy behaviors.
+In particular, it supports the objective to maximize the use of locally produced electricity\footnote{The full narrative behind this type of energy intervention
+is described in CIVIS Deliverable 1.3}, by means of a collective deliberation process for the allocation of an `energy bonus', which is collected through the consumptions
+made under the green ToU signal.
+
+A website has been implemented to:
 \begin{itemize}
  \item detail the conditions and regulations for the participatory budgeting process;
  \item submit idea proposals for the awarding of the ``energy bonus'';
- \item update involved users about proposals received;
+ \item update involved users about the proposals received;
  \item inform users about the various steps along the evaluation and selection procedures for the awarded proposals. 
 \end{itemize}
 The website can be reached at \url{https://progettocivis.wordpress.com/}.
