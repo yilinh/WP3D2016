@@ -54,101 +54,19 @@ The noteworthy Node.js libraries used for the WP3 back-end development are as fo
 
 The YouPower back-end REST API documentation can be found at {\footnotesize\url{http://civis.tbm.tudelft.nl/apidoc/}}. 
 % 
-
-
-\subsection{Feature enhancements (Frontend and Backend)}
-We added substantial feature for visualizing the energy consumption and production of households in Trentino test sites, CEIS and CEDIS. We have developed a number of endpoints that interacts with Reply and  TOU signals from CreatNet. In the following sub sections, we described the endpoints we have developed and API path while details on the new endpoints description and parameter list could be found in the API documentation of YouPower.
-
-\subsubsection{Accessibility}
-The energy tab is only visible for users from trentino test site. Users should select their  corresponding municipality area (i.e. CEIS or CEDIS) and provide a contract Id in the settings page. This contract Id will then be mapped to Apartment ID (also called UsagePoint). Apartment Id is unique for each household and data associated with consumption and production recorded from the sensor are referenced through  this Ids.
-
-\subsubsection{TOU (Time of Use) signals}
-YouPower provides the current energy level(red smileys representing  low energy  tariffs and green smiley for high energy tariff levels) and a prediction of energy tariff levels for the following 30 hours. TOU signals are provided with a non-secured protocol(http) which raises mixed content issue since YouPower requires a secure connection. For this, we have developed two backend APIs.
-
-\begin{table}[h!]
-\caption{TOU endpoints}\label{tab:app_nav}
-\begin{center} \footnotesize 
-\begin{tabular}{ l p{6cm}}
-\hline
-\textbf{Endpoint}  &
-\textbf{Description}  \\ \hline
-
-/api/energymeteo/tou  & 
-Provides energy level tariffs for previous 30 hours
-\\ 
-/api/energymeteo/tou/current & Provides the current energy tariff \\ 
- \hline
-\end{tabular}
-\end{center} 
-\end{table}
-
-\subsubsection{Electric consumption and production updates}
-The app update users by showing the amount of consumption and production in a given time(energy) and power levels of the last six to eight minutes recorded in either today or the last time a sensor provides this informations. Sometimes, when there is a sudden changes in power, raspberry may need  to restart or  lack of connectivity to internet may happen. In this cases, sensors may stop sending signals to the Reply server. The app shows the most recent updates that shows the last time an electric consumption and production recorded from sensors.
-
-\subsubsection{Appliances consumption updates}
-The app includes information on consumption per each appliance. List of all available appliances for a household like ``Lavatrice'' and ``Freezer'' are listed in the appliances tab of the app, with corresponding timing where last consumption is recorded.
-\begin{table}[h!]
-\caption{Endpoints for getting last consumption records}\label{tab:app_nav}
-\begin{center} \footnotesize 
-\begin{tabular}{ l p{6cm}}
-\hline
-\textbf{Endpoint}  &
-\textbf{Description}  \\ \hline
-
-
-/api/consumption/last
-  & 
-Provides energy level tariffs for previous 30 hours \\ 
-/api/production/last & Provides the last production amount recorded for a household with a PV \\ 
-/api/consumption/appliance & Gives list of all available appliances for a household and the last time stamp a consumption data is recorded \\ 
- \hline
-\end{tabular}
-\end{center} 
-\end{table}
-\subsubsection{Energy data(Consumption and production)
-}
-Daily consumption provided by an appliance is accessible from YouPower by setting a range of dates (users can avoid sending unnecessary request of a consumption which may not be available by checking the recent updates) a user is interested at. A series of consumption history for all the appliances of a household can also be obtained by requesting the endpoint with a contract Id.
-\begin{table}[h!]
-\caption{Endpoints for getting energy consumption}\label{tab:app_nav}
-\begin{center} \footnotesize 
-\begin{tabular}{ l p{6cm}}
-\hline
-\textbf{Endpoint}  &
-\textbf{Description}  \\ \hline
-
-/api/consumption/appliance/:applID
-  & 
-Provides the consumption history of an appliance taking household Id, startdate and enddate as parameters \\ 
-/api/consumption & Provides a series of consumption history for all appliances of a household in F1, F2 and F3 levels \\ 
- \hline
-\end{tabular}
-\end{center} 
-\end{table}
-
-\subsubsection{Consumption comparison in energy tariff levels}
-This part of the app shows comparison containing consumption record of a household based on red and green levels. The red levels shows the amount of consumption a household used when the energy level is low, and the green for high energy levels.
-
-\subsubsection{Community consumption comparison}
-This section contains two main comparison graphs. The first contains consumption comparison of the two municipalities, CEIS and CEDIS, for the 24 hours period of the required date in intervals of 1 hour. The second part of the graph shows comparison of a household consumption with the total consumption of a municipality and the average consumption of the households in the same municipality. We implemented an endpoint for accessing the daily consumption of all households from reply server and it will be dumped to Delft server for accessing requested resource fast.
-
-\subsubsection{Technical issues}
-We have used the same set of technologies stated in the Backend section of this document. We have listed the issues we have faced during feature improvement.
-\begin{table}[h!]
-\caption{Technical issues}\label{tab:app_nav}
-\begin{center} \footnotesize 
-\begin{tabular}{ l p{6cm}}
-\hline
-\textbf{Issue}  &
-\textbf{Status}  \\ \hline
-
-DatePicker incompatibility with firefox
-  & 
-Not fixed -- planned for next update\\ 
-CORS issue when accessing CN endpoints & Fixed: CN server allow civisproject domain \\ 
- \hline
-\end{tabular}
-\end{center} 
-\end{table}
+\subsubsection{Feature improvement - technologies in backend}
+We have added new features and improved previous features of youpower to give real experience of the app for Trentino users. We added model schemas and a number of API's which detail description could be found in the API documentation.
+\begin{itemize}
+\item node-xml2js\footnote{\url{https://github.com/Leonidas-from-XIV/node-xml2js}}, Simple XML to JavaScript object converter. 
+\item dateformat\footnote{\url{https://www.npmjs.com/package/dateformat}}, for formatting dates to various formats. 
+\item HTTPS\footnote{\url{https://nodejs.org/api/https.html}}, A nodeJs module used to make service calls over TLS/SSL. 
+\item querystring\footnote{\url{https://www.npmjs.com/package/querystring}}, for deserializing querystring to an object. 
+\item fs\footnote{\url{https://www.npmjs.com/package/querystring}}, for manipulating file in NodeJS. 
+\item Mongoose
+\item Moment
+\item Express
+\item APIDOC script
+\end{itemize}
 
 
 \subsection{Resources}
