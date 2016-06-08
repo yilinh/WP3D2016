@@ -28,32 +28,3 @@ Other noteworthy JS and Angular libraries (i.e. besides Ionic) we use for the fr
 \item Ion-datetime-picker\footnote{\url{https://www.npmjs.com/package/ionic-datetime-picker}}, a date and time picker for the ionic framework. 
 
 \end{itemize}
-\subsubsection{Feature improvement - technologies in frontend}
-YouPower has been updated to give trentino users the capability to visualize their consumption and production data as well as comparing personal consumption and production with the benchmark. We have used the following list of modules and frameworks to develop the new feature. Description and use of each tool is given in section 3.1 above.
-\begin{itemize}
-\item Highcharts
-\item highcharts-ng
-\item Moment
-\item ion-datetime-picker
-\item angular-translate
-\item Ionic
-\end{itemize}
-\subsubsection{Technical issues}
- The following table summarizes the technical issues we have faced in developing the new features including those which are already solved and integrated to YouPower and issues which will be fixed in upcoming updates.  
-\begin{table}[h!]
-\caption{Technical issues}\label{tab:app_nav}
-\begin{center} \footnotesize 
-\begin{tabular}{ l p{6cm}}
-\hline
-\textbf{Issue}  &
-\textbf{Status}  \\ \hline
-
-DatePicker incompatibility with firefox
-  & 
-Not fixed -- planned for next update\\ 
-CORS issue when accessing CN endpoints & Fixed: CN server allow civisproject domain \\ 
-Mixed content issue(secured and unsecured content) & Status: Fixed: We developed 2 endpoints in backend for accessing TOU signals(originally non-secured) from creatNet serverand provide secured content from YouPower backend.\\
- \hline
-\end{tabular}
-\end{center} 
-\end{table}
