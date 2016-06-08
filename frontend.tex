@@ -32,14 +32,14 @@ Other noteworthy JS and Angular libraries (i.e. besides Ionic) we use for the fr
 YouPower has been updated to give trentino users the capability to visualize their consumption and production data as well as comparing personal consumption and production with the benchmark. We used the following list of technologies, which usage and source of the technologies are described in section 3.1 above. 
 \begin{itemize}
 \item Highcharts
+\item highcharts-ng
 \item Moment
 \item ion-datetime-picker
 \item angular-translate
-\item ionic
-\item highcharts-ng
+\item Ionic
 \end{itemize}
 \subsubsection{Technical issues}
- 
+ The following table summarizes technical issues in YouPower frontend.
 \begin{table}[h!]
 \caption{Technical issues}\label{tab:app_nav}
 \begin{center} \footnotesize 
@@ -52,6 +52,7 @@ DatePicker incompatibility with firefox
   & 
 Not fixed -- planned for next update\\ 
 CORS issue when accessing CN endpoints & Fixed: CN server allow civisproject domain \\ 
+Mixed content issue(secured and unsecured content) & Status: Fixed: We developed 2 endpoints in backend for accessing TOU signals(originally non-secured) from creatNet serverand provide secured content from YouPower backend.\\
  \hline
 \end{tabular}
 \end{center} 
