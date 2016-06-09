@@ -2,13 +2,41 @@
 
 \subsection{T3.1 Community Management}
 
-Task 3.1 works in close cooperation with WP5 to explore community management. This is reflected in the diverse CIVIS platform functionalities in supporting housing cooperative activities in the Swedish test site (see Sec. \ref{sec:brf}) and the two local Consortia in the Italian test site respectively (see Sec. \ref{sec:energydata}). Those functionalities are designed and tailored to the local context as following:   
+Task 3.1 works in close cooperation with WP5 to explore community management. This is reflected in the diverse CIVIS platform functionalities in supporting housing cooperative activities in the Swedish test site (see Sec. \ref{sec:brf}) and the two local Consortia in the Italian test site respectively (see Sec. \ref{sec:energydata}). Those functionalities are designed and tailored to the local context as follows:   
 
 \begin{itemize}
 \item 
 \end{itemize}
 
 \subsection{T3.2 Energy Consumer Profiling}
+
+This task was carried out between the last quarter of 2014 and the first quarter of 2015.
+The goal was to provide a method to process individual electricity consumption
+data in order to define a set of features that can characterize the behavioral patterns of each
+consumer, and a way to group similar consumers together. The process devised can be summarized
+as follows:
+
+\begin{enumerate} 
+\item Energy data is provided in XML format in the green button standard.
+\item Energy data is stored into a MongoDB database.
+\item The data is cleaned. In particular, missing data are detected and, where possible, interpolated. Outliers are detected and substituted with interpolated data. A report with all the modifications performed on
+data is produced. 
+\item Features are extracted from each individual energy consumption dataset. Examples of such
+features are: average daily consumption, average hourly consumption, peak consumption, peak hour
+consumption, total daily consumption. Each electric energy consumption time series is mapped to a
+tuple of such features and stored in a MongoDB database.
+\item Features tuples are clustered into similar groups. A range of algorithms are provided. These
+algorithms are available in the scientific computing package \textit{scikit-learn}\footnote{\url{http://scikit-learn.org}}. Examples of those algorithms are K-means,
+hierarchical clustering, affinity propagation, spectral clustering, sb scan.
+\item A set of metrics to evaluate the goodness of the achieved clustering is provided. These metrics are implemented in the scientific computing package scikit-learn. Examples of those are CDI, MDI,
+MSE, DBI.
+\end{enumerate}
+
+The software is written in Python and it is available at the GitHub repository\footnote{\url{https://github.com/massaroantonio/civis}}.
+
+Note: after discussing with the CIVIS partners, we agreed that given the test site context of CIVIS, the consumption profiling part was not a promising path towards load-shifting. Hence, although significant work has been done in this direction, we did not integrate this contribution to the YouPower application. (Nonetheless this contribution can still be useful for others.)
+Instead, we devoted extra time and effort for the design of an energy production forecasting
+system, discussed in Sec. 4.2, which can have a strong impact to help users achieve the load-shifting goals.
 
 \subsection{T3.3 Interface with System Level}
 
