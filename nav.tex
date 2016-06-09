@@ -11,21 +11,19 @@
 %
 %There are many finer details in how to present users with information and how this could affect user behavior. All these are interesting topics to study. 
 
-\subsubsection{YouPower App Navigation Structure}
+\subsubsection{YouPower Application Navigation Structure}
 
 The side navigation (nav) of the YouPower front-end application is composed of six items, among which the ``Energy Data'' or ``Housing Cooperatives'' is activated respectively after a user authenticated his/her household's account for energy data (production is only for the Italian case) or after a user is a member of a housing cooperative (the Swedish case); see for example Figure~\ref{fig:tab}, which depicts an Italian case with an open side navigation drawer. 
 Except for the ``Log Out'' item, each nav item is associated with at least one tab item, which in term has different views. Table~\ref{tab:app_nav} presents the navigation structure of the YouPower application. 
 
-{
-\footnotesize 
-\begin{longtable}{ p{4cm}  p{4cm} p{6.5cm}}
+\begin{longtable}{ p{3.5cm}  p{3.5cm} p{7.5cm}}
 \caption{YouPower app navigation structure}\label{tab:app_nav}\\
 \hline
 \textbf{Side Nav Items}  &
 \textbf{Tab Items}  &
 \textbf{Views}  \\ \hline
 
-Actions & Your Actions & Current Actions (and view/add Comments, Like, Share), Completed Actions (and view/add Comments, Like, Share), Suggested Action, Postpone Action, Action Completed (Form), Action Completed (Form).\\ \cline{2-3}
+Actions & Your Actions & Current Actions (and view/add Comments, Like, Share), Completed Actions (and view/add Comments, Like, Share), Suggested Action, Postpone Action, Action Completed (Form), Action Completed (Form) \\ \cline{2-3}
 & Household Actions & Invited to Your Household, Pending Invites, Members, Actions (of household members), Invite Household Member (search and invite), Send an Invitation by Email \\ 
 %& Community Actions & Community List, Top Action List, Discussions, etc.\\ 
 %& Achievements & Achievement List (unlocked/locked), etc.\\  
@@ -40,14 +38,14 @@ Housing Cooperatives & \textit{Name} (of ones own cooperative) & Cooperative Act
 
 %Donation (Trentino only) & n/a & Campaign Information, Campaign Status \\ \hline
 
-Settings & Settings & Configurations of actions, Link to Facebook \\ 
-& Personal Profile & Email, Name, Testbed location, Preferred Language, etc.  \\ 
+Settings & Settings & Configurations of actions, Link to Facebook \\  \cline{2-3}
+& Personal Profile & Email, Name, Testbed location, Preferred Language, etc.  \\ \cline{2-3}
 & Household Profile & Cooperative (if applicable), size, Household Composition, etc.\\  \hline
 
 About & About & Q\&A List, Contact\\ \hline
 Log Out &   &  \\ \hline
 \end{longtable}
-} 
+
 
 %The ``Action List'' is the index view of ``Your Actions'' tab. It is also the default view after user login. In this case, when the user presses on one of the ``Current Actions'', the app navigates to the ``Action Details'' view. Figure~\ref{fig:action_details} gives an example. 
 % 
