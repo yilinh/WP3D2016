@@ -9,10 +9,7 @@ using \textit{Nginx}\footnote{\url{https://nginx.org/en/}}, an http and reservse
 % 
 A \textit{Comodo}\footnote{\url{https://ssl.comodo.com/}} SSL certificate is installed on the server to provide secure communication (i.e. https). 
 
-% 
-The WP3 back-end interacts with the WP4 back-end, from which the former fetches relevant energy data that is particularly relevant for visualization of energy consumption/production and energy consumption signal. The availability of such data through the WP4 platform represents therefore a pre-condition for the ability of the app to correctly visualize such information.
-
-\textit{MongoDB}\footnote{\url{https://mongodb.org/}} is used as the back-end database. It is document-oriented, and has flexible data schema and expressive query language. 
+\textit{MongoDB}\footnote{\url{https://mongodb.org/}} is used as the WP3 back-end database. It is document-oriented, and has flexible data schema and expressive query language. 
 A list of the data models at the back-end can be found at {\footnotesize\url{https://github.com/CIVIS-project/YouPower/tree/master/backend/models}}. 
 Figure~\ref{fig:datamodel} shows the data model schema.
 %
@@ -50,14 +47,19 @@ The noteworthy Node.js libraries used for the WP3 back-end development are as fo
 \item Moment.js\footnote{\url{http://momentjs.com/}}, a JS library to parse, validate, manipulate and display dates. 
 
 \item APIDOC script\footnote{\url{http://apidocjs.com/}}, for inline documentation for the REST API. 
-\item node-xml2js\footnote{\url{https://github.com/Leonidas-from-XIV/node-xml2js}}, Simple XML to JavaScript object converter. 
-\item dateformat\footnote{\url{https://www.npmjs.com/package/dateformat}}, for formatting dates to custom formats. 
+
+\item Node-xml2js\footnote{\url{https://github.com/Leonidas-from-XIV/node-xml2js}}, a simple XML to JavaScript object converter. 
+
+\item Dateformat\footnote{\url{https://www.npmjs.com/package/dateformat}}, for formatting dates to custom formats. 
+
 \item HTTPS\footnote{\url{https://nodejs.org/api/https.html}}, A nodeJs module used to make service calls over TLS/SSL. 
-\item querystring\footnote{\url{https://www.npmjs.com/package/querystring}}, for deserializing querystring to an object. 
-\item fs\footnote{\url{https://www.npmjs.com/package/querystring}}, for manipulating file in NodeJS. 
+
+\item Querystring\footnote{\url{https://www.npmjs.com/package/querystring}}, for deserializing querystring to an object. 
+
+\item Fs\footnote{\url{https://www.npmjs.com/package/querystring}}, for manipulating file in NodeJS. 
 \end{itemize}
 
-The YouPower back-end REST API documentation can be found at {\footnotesize\url{http://civis.tbm.tudelft.nl/apidoc/}}. 
+% 
+The WP3 back-end interacts with the WP4 back-end, from which the former fetches relevant energy data that is particularly relevant for visualization of energy consumption/production and energy consumption signal. The availability of such data through the WP4 platform represents therefore a pre-condition for the ability of the app to correctly visualize such information. The WP3 back-end REST API documentation can be found at {\footnotesize\url{http://civis.tbm.tudelft.nl/apidoc/}}. 
 % 
 
-\subsection{Resources}

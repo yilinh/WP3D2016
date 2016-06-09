@@ -18,25 +18,33 @@ as follows:
 
 \begin{enumerate} 
 \item Energy data is provided in XML format in the green button standard.
+
 \item Energy data is stored into a MongoDB database.
+
 \item The data is cleaned. In particular, missing data are detected and, where possible, interpolated. Outliers are detected and substituted with interpolated data. A report with all the modifications performed on
 data is produced. 
+
 \item Features are extracted from each individual energy consumption dataset. Examples of such
 features are: average daily consumption, average hourly consumption, peak consumption, peak hour
 consumption, total daily consumption. Each electric energy consumption time series is mapped to a
 tuple of such features and stored in a MongoDB database.
+
 \item Features tuples are clustered into similar groups. A range of algorithms are provided. These
 algorithms are available in the scientific computing package \textit{scikit-learn}\footnote{\url{http://scikit-learn.org}}. Examples of those algorithms are K-means,
-hierarchical clustering, affinity propagation, spectral clustering, sb scan.
-\item A set of metrics to evaluate the goodness of the achieved clustering is provided. These metrics are implemented in the scientific computing package scikit-learn. Examples of those are CDI, MDI,
-MSE, DBI.
+hierarchical clustering, affinity propagation, spectral clustering, DB scan.
+
+\item A set of metrics to evaluate the goodness of the achieved clustering is provided. These metrics are implemented by scikit-learn. Examples of those are 
+DBI (Davies-Bouldin Index),
+CDI  (Cluster Dispersion Indicator),
+MDI (Modified Dunn Index),
+MSE (Mean Squared Error).
 \end{enumerate}
 
-The software is written in Python and it is available at the GitHub repository\footnote{\url{https://github.com/massaroantonio/civis}}.
+The software is written in Python and it is available at the GitHub repository\footnote{\url{https://github.com/CIVIS-project/Consumer_profiling}}.
 
 Note: after discussing with the CIVIS partners, we agreed that given the test site context of CIVIS, the consumption profiling part was not a most promising path towards load-shifting. Hence, although significant work has been done in this direction, we did not integrate this contribution to the YouPower application. (Nonetheless this contribution can still be useful for others.)
 Instead, we devoted extra time and effort for the design and development of an energy production forecasting
-system, discussed in Sec. 4.2, which can have a strong impact to help users achieve the load-shifting goals.
+system, Sec.~\ref{sec:energydata}, which can have a strong impact to help users achieve the load-shifting goals.
 
 \subsection{T3.3 Interface with System Level}
 
