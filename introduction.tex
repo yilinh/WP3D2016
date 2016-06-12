@@ -9,8 +9,10 @@ Work Package 3 (WP3) focuses on the design and development of ICT facilitation f
 D3.3) Final field tested Integrated Energy System: Output of T3.1-5; Based on information provided by the deployment of deliverable 3.2 the software is further refined to provide energy services and community management (open source). 
 \end{quote}
 
-The 3rd year's project activities continued the design and development of the software platform \textit{YouPower}\footnote{\url{http://civis.tbm.tudelft.nl/} or \url{https://app.civisproject.eu/}}, expanding upon the 2nd year's result reported in D3.2 \citep{Huang2015c}. 
-As stated in D3.2, the CIVIS platform is composed of two parts (see Figure~\ref{fig:platform}): 
+
+The 3rd year's project activities continued and completed  the design and development of the CIVIS software platform \textit{YouPower}\footnote{\url{http://civis.tbm.tudelft.nl/} or \url{https://app.civisproject.eu/}}, 
+expanding upon the 2nd year's result reported in D3.2 \citep{Huang2015c}. 
+%
 \begin{figure}[h!]
 \begin{center}\footnotesize
 	\includegraphics[width=.85\textwidth]{img/civis_platform_overview.pdf}\\
@@ -19,15 +21,19 @@ As stated in D3.2, the CIVIS platform is composed of two parts (see Figure~\ref{
 \end{center}
 \end{figure}
 % 
-the services provided by the CIVIS back-end, and the CIVIS front-end application which users directly interact with. 
+As stated in D3.2, the CIVIS platform is composed of two parts (see Figure~\ref{fig:platform}): 
+the services provided by the CIVIS back-end, and the CIVIS front-end application that users directly interact with. 
 %
 To this end, WP4 focuses on the system level ICT services that deal with the energy data and its collection through the smart meters and sensors installed at the Swedish and Italian test sites (see D4.3 for more details). 
 % 
 WP3 focuses on the front-end application and the social level ICT services that are related to users/prosumers, households, communities, energy consumptions, etc. 
 
-In this report, we discuss the design and development of the WP3 part of the CIVIS platform known as YouPower\footnote{The CIVIS front-end application used to be called EnergyUP. The old name may be found in some old documents and/or mock-ups.}. 
-The final results are summarized as a whole for readability and usefulness. The refinement and improvement made in the third year are highlighted where necessary when possible. 
+In this report, we present and discuss the design and development (Sec.~\ref{sec:CIVISdesign} and ~\ref{sec:develop}) of the WP3 part of the CIVIS platform known as YouPower\footnote{The CIVIS front-end application used to be called EnergyUP. The old name may be found in some old documents and/or mock-ups.}. 
+The final results are presented and discussed as a whole for readability and usefulness. 
+% The refinement and improvement made in the third year are highlighted where necessary when possible. 
 % 
+We also present the user registration processes (Sec.~\ref{sec:reg}) that are tailored for the Swedish and Italian test sites, and give a detailed description of the management and the setup of the YouPower application (Sec.~\ref{sec:setup}). The contribution of the tasks in WP3 are summarized (Sec.~\ref{sec:tasks}).
+
 The functionalities of the platform reported are deployed at Stockholm (Sweden) and Trento (Italy) test sites respectively according to the local context. The YouPower software is open source under the Apache v.2 License\footnote{\url{https://github.com/CIVIS-project/YouPower/blob/master/LICENSE}}. It has  an online repository at GitHub\footnote{ \url{https://github.com/CIVIS-project/YouPower/}}. 
 The backend API documentation is aslo available online\footnote{ \url{http://civis.tbm.tudelft.nl/apidoc/}}. 
 
@@ -50,7 +56,7 @@ The design and development of YouPower is theory-driven, user-centered and itera
 
 In the 2nd year of CIVIS, we started with brainstorming sessions and a design workshop. A set of features was prototyped in simple handcrafted mock-ups used as a basis for discussion, and then underwent iterative rapid prototyping which produced wireframes as visual guides that can be more effectively communicated to general users. These prototypes were evaluated by user tests with groups of students and colleagues. Using the wireframe prototypes and later the software prototypes, we conducted focus group studies with consumers in Trento, test studies and focus groups with consumers and housing cooperative members in Stockholm, as well as a user study with pro-environmental participants in Helsinki. 
 
-In the 3rd year of CIVIS, the iterative design and development process continued. We paid particular attention to quick responses to changes, user feedback and adaptive development. We also furthered literature research in environmental psychology and intervention design, and expanded the design guidelines based on literature, our design practices and experiences. These guidelines can be useful for a wider group of designers interested in pro-environmental information-based intervention. YouPower has been refined and improved gradually in the 3rd year resulting the current version of the application. The first deployment at the Stockholm test site was in Nov 2015 and Trento test site in Mar 2016 correspondingly. The production server (i.e. CIVIS YouPower server hosted by TU Delft) since then has been updated once there were new parts ready for deployment.  
+In the 3rd year of CIVIS, the iterative design and development process continued. We paid particular attention to quick responses to changes, user feedback and adaptive development. We also furthered literature research in environmental psychology and intervention design, and expanded the design guidelines based on literature, our design practices and experiences. These guidelines can be useful for a wide group of designers who are interested in pro-environmental information-based intervention. YouPower has been refined and improved gradually in the 3rd year resulting the current version of the application. The first deployment at the Stockholm test site was in Nov 2015 and Trento test site in Mar 2016 correspondingly. The production server (i.e. CIVIS YouPower server hosted by TU Delft) since then has been updated once there were new parts ready for deployment.  
 The rest of this report presents and discusses the latest version of YouPower. 
 
 %literature, group feedback (internal), user feedback: workshops, focus groups 
