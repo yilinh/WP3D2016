@@ -69,7 +69,23 @@ Sec. 8.3 of CIVIS D4.1 contains the descriptions of three different models that 
 \item Solution 3: double connection and use of a remote DB (Sec. 8.3.3 of D4.1).
 \end{itemize}
 
-Sec. 8.3 of D4.1 also describes the different features, in terms of scalability, that the three solutions can provide. For the deployment of CIVIS ICT Platform we adopted Solution 1, because it was suitable for achieving all the fixed goals in the provided project time frame and that is represented in Figure 1.
+Sec. 8.3 of D4.1 also describes the different features, in terms of scalability, that the three solutions can provide. For the deployment of CIVIS ICT Platform we adopted Solution 1, because it was suitable for achieving all the fixed goals in the provided project time frame and that is represented in Figure \ref{fig:wp4}.
+
+\begin{figure}[h!]
+\begin{center}
+	\includegraphics[width=.85\textwidth]{img/wp4.png}
+	\caption{Solution 1 implemented in the CIVIS deployment}\label{fig:wp4}
+\end{center}
+\end{figure}
+
+The usage of a SQL database, already integrated into the HiReply Platform, simplified the configuration and maintenance operations associated to the system database, without presenting those problems that could be present in large pilot site deployments with SQL technologies.
+The solution 1 foresaw only one communication channel between user and system level architectures. For this reason the interface developed in WP4 reflects this schema and implements all the communication APIs on the same server.
+The implemented APIs, documented in Sec. 5.9 of D4.3 v2.0, provide the possibility to retrieve, from the Energy ICT Platform developed in WP4, the following information:
+
+\begin{itemize}
+\item Energy data coming from DSOs and CIVIS additional sensors, provided in GreenButton format, suitably extended for introducing some parameters useful for CIVIS applications;
+\item Non-energy information such as the list of all usage points monitored in the system, weather info, the list of the recognized events associated to a usage point in a certain period, etc. 
+\end{itemize}
 
 \subsection{T3.4 Energy Service Context}
 
