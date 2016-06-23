@@ -1,9 +1,22 @@
 \subsubsection{Energy Awareness at Individual and Collective Levels}
 \label{sec:energydata}
 
+<<<<<<< HEAD
+This part of the application is designed and developed to enable an informed approach to `fair energy use'\footnote{Simply understood as people using energy while
+being conscious of their individual energy footprint and the resulting impacts.} by making people aware of their
+energy behaviors in individual and collective terms.
+
+Indeed, it includes means for users to visualize in an easily
+=======
 This part of the application is designed and developed to enable an informed approach to energy use by making people aware of their
 energy behaviors in individual and collective terms. Indeed, it includes means for users to visualize in an easily
+>>>>>>> 83a5c0b5a82168074603134a50c4072ef59e54ff
 understandable and actionable way a specific set of energy measurements, simple analytics and a time-of-use (ToU) signal.
+From a general point of view, this part of the app is meant to support the collective demand side management
+action that is described within the project use case\footnote{To fully realize such use case, the deployment of the external service ``Participatory Budgeting portal''
+was needed. This service is described below in the last part of this subsection.
+For a detailed and comprehensive description of this use case, see CIVIS Deliverable 1.3, Annex 1 - ``Energy Garden'' user story.}
+and which aims at subsidizing such collective action through the ``energy bonus'' made avilable from the two Energy Cooperatives.
 
 The access point for this part of the app is the ``Energy Data'' navigation tab (Figure \ref{fig:tab}). This tab gives access to an
 overview of the various functionalities and visualizations of specific information: ``Energy Meteo'', visualization of consumption and production data (real time and historical),
@@ -88,8 +101,10 @@ Users can access these information from the ``Energy Data'' main screen and eith
 household's electric production (Figure \ref{fig:viz_rt}-2).
 These visualizations provide meters for:
 \begin{description}
- \item[Energy.] It is accounted for the most recent 6-10 minutes monitored.
- \item[Power.] It provides instant measurement\footnote{For technical reasons and depending on several environmental factors (\textit{e.g.} households connectivity for transfer of monitored data) there may be up to approximately 2 minutes delay between the actual power measured and the data displayed through You Power.}.
+ \item[Energy.] It appears at the top part of the screen and it accounts the most recent 6 minutes monitored.
+ This information is graphically shown through the 'meter' and also displayed in numbers for an easier reading.
+ \item[Power.] It appears at the bottom part of the screen and it provides instant measurement\footnote{For technical reasons and depending on several environmental factors (\textit{e.g.} households connectivity for transfer of monitored data) there may be up to approximately 2 minutes delay between the actual power measured and the data displayed through You Power.}.
+ This information is graphically shown through the 'meter' and also displayed in numbers for an easier reading.
 \end{description}
 
 
@@ -143,28 +158,40 @@ There are two type of comparisons that can be visualized through YouPower:
  On the top part it shows the individual household chart, while on the bottom, the community\footnote{In this case community refers to the registered users who 
  are served by the same Energy cooperative through the same local distribution network.} total distribution. This view is a static one and is progressively updated on a weekly basis. The descriptive label for the chart clearly highlights the reference period considered.
  \item[Consumption profile benchmark] It provides users with a benchmark\footnote{While in principle homogeneous groups of users could be identified to make the comparison more sound, this requires data (household composition, size of dwelling, type and number of appliances preset, thermal isolation \ldots) which are not currently available for the vast majority of the users engaged in the pilot.
- Furthermore, the heterogeneity and limited number of users involved would not allow to form meaningful groups for creating sound averages and benchmarking. For this reason the simple community average is used as a benchmark.} of consumption profile -- \textit{load curve}. It provides two graphs. At the top part of the screen the load curves are shown as average of households enrolled by the two Consortia.
- At the bottom part, household's load curve is compared with the average and the total of the related Consortium. These information are available only at a daily level. Therefore, users have to select the day (available starting from the previous day and backwards) for which they want to visualize such benchmarks
+ Furthermore, the heterogeneity and limited number of users involved would not allow to form meaningful groups for creating sound averages and benchmarking. For this reason the simple community average is used as a benchmark.} of consumption profile -- \textit{load curve}.
+ It provides two graphs. At the top part of the screen the load curves are shown as households average grouped by the two Cooperatives.
+ At the bottom part, household's load curve is compared with the average and the total of the related Cooperative. These information are available only at a daily level. Therefore, users have to select the day (available starting from the previous day and backwards) for which they want to visualize such benchmarks
 \end{description}
 These features can be accessed by clicking on the ``community'' icon, which is symbolized by the two people on the top level bar.
 
 
+<<<<<<< HEAD
+\paragraph{External service for ``Donation'': Participatory Budgeting portal} 
+
+The Participatory Budgeting portal is an external service\footnote{This service was initially intended for integration in YouPower as the ``Donation'' tab
+(For reference, see CIVIS Deliverable 3.2, Tabe 4). However, since the reuiqred functionalities for this service emerged together with the construction of the process a more flexible
+and easy to change method was needed. For this reason we explored the key functionalities for ``Donation'' tab through the Participatory Budgeting external service.}
+designed to accompany users along their efforts of changing their energy behaviors.
+
+Particpatory budgeting is a democratic deliberation process for the allocation of public resources. 
+In the CIVIS context, the resource to be allocated through a public and transparent process is \emph{energy} (KwH), by means of an ``energy bonus''
+made available by the Energy cooperatives in connection to
+KwH consumed under the green smilies ToU signal.
+=======
 \paragraph{Participatory budgeting external service} 
+>>>>>>> 83a5c0b5a82168074603134a50c4072ef59e54ff
 
-This external service\footnote{This service was initially expected to be integrated in YouPower. However, due to the delays for the app deployment it was not possible
-to fully develop and integrate it in YouPower. Therefore, similar functionalities have been provided through
-this external service.} and process is designed to accompany users along their efforts of changing their energy behaviors.
-In particular, it supports the objective to maximize the use of locally produced electricity\footnote{The full narrative behind this type of energy intervention
-is described in CIVIS Deliverable 1.3}, by means of a collective deliberation process for the allocation of an `energy bonus', which is collected through the consumptions
-made under the green ToU signal.
+% The portal supports the objective to maximize the use of locally produced electricity\footnote{The full narrative behind this type of energy intervention
+% is described in CIVIS Deliverable 1.3}, by means of a collective deliberation process for the allocation of an `energy bonus', which is collected through the consumptions
+% made under the green ToU signal.
 
-A website has been implemented to:
+The portal is implemented as a website with the goal to:
 \begin{itemize}
  \item detail the conditions and regulations for the participatory budgeting process;
  \item submit idea proposals for the awarding of the ``energy bonus'';
  \item update involved users about the proposals received;
  \item inform users about the various steps along the evaluation and selection procedures for the awarded proposals. 
 \end{itemize}
-The website can be reached at \url{https://progettocivis.wordpress.com/}.
+The Participatory Budgeting portal can be reached at \url{https://progettocivis.wordpress.com/}.
 
 %
