@@ -34,9 +34,12 @@ well defined individual and collective efforts.
 
 
 \paragraph{``Energy Meteo'': the Time-of-Use (ToU) signal} 
-It is designed to leverage load elasticity for maximizing self-consumption, with the twofold effect of optimizing usage of locally-installed RESs and minimizing dependency from energy markets. This means that electric loads shall be shifted to periods of time characterized by high local production from renewable energy sources.
-It provides users with a clear indication of the actual status of the local grid: \textit{green smilies} signal slots when local production exceeds demand; \textit{red smilies} highlight slots
-when demand exceeds local production\footnote{See Deliverable 4.2 \textbf{[NB: VERIFY!!]}, for more details on the technical design and implementation of the predictive model of the ToU signal.}.
+
+This feature is designed to leverage load elasticity for maximizing Energy Cooperatives' self-consumption.
+It has the twofold effect of optimizing usage of RESs installed by the Energy Cooperatives and minimizing their dependency from national energy grid.
+Concrete goal of this feature is to support shifts of electric consumption loads to time-periods characterized by high local production from renewable energy sources.
+Therefore, Energy Meteo provides users with a clear indications on the actual status of the local grid and a 30-hours forecast\footnote{Appendix B, in CIVIS D4.3 \textit{Energy ICT Platform - Platform Enablers}, describes in details the technical design and implementation for the predictive model
+that is the basis of the Time-of-Use signal and the forecast.} \textit{green smilies} signal slots when local production exceeds demand; \textit{red smilies} highlight slots when demand exceeds local production.
 
 \begin{figure}
       \begin{center}
@@ -57,7 +60,9 @@ The ToU signal is provided in two distinct ways:
 \begin{description}
  \item[Current.] It is available on the main screen (Figure \ref{fig:overview-tou}-1) and it indicates whether \textit{present} moment is a good (`green smiley') or bad moment (`red smiley')
  to consume locally produced electricity.
- \item[Forecast.] It is available by clicking on ``Energy Meteo'' field and it provides a detailed overview of the local grid conditions, forecasted in 3-hours time-slots, for the forthcoming 30 hours (Figure \ref{fig:overview-tou}-2). A new forecast is generated every 24 hours.
+ \item[Forecast.] It is available by clicking on ``Energy Meteo'' field and it provides a detailed overview of the local grid conditions, forecasted in 3-hours time-slots, for the forthcoming 30 hours (Figure \ref{fig:overview-tou}-2). A new forecast is generated every 24 hours\footnote{From the point of view of interaction with back-end, this visualization relies on the
+ service hosted on the WP3 platform which exposes the signal forecasts at the specific addresses \url{http://217.77.95.103/api/tou/sanlorenzo}, \url{http://217.77.95.103/api/tou/storo},
+ \url{http://217.77.95.103/api/tou/sanlorenzo/current}, \url{http://217.77.95.103/api/tou/storo/current}.}.
 \end{description}
 
 
