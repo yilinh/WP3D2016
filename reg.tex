@@ -5,22 +5,27 @@ In general, a user can sign up for a YouPower account at the application's welco
 
 \subsection{Swedish Test Site}
 
-For the Swedish test site users, the registration process is as follows. 
+For the Swedish test site users, the registration process depends on the type of user (household member or energy manager) and for household users if their energy data is managed by the cooperative or not (affecting mainly step 2 below). The users register as follows:
 
 \begin{enumerate}
-\item A user receives a flyer with a URL that is housing-cooperative-specific, i.e. the housing cooperative which the user belongs to. 
+\item A household user receives a flyer with information about the app and a URL (also provided as a QR code) that is housing-cooperative-specific, i.e. the housing cooperative which the user belongs to. 
 
-The URL location is managed by KTH (i.e. it is a local Swedish URL) in the format of  \texttt{\small http://civis.proj.kth.se/}\textit{\{unique-link-of-a-housing-coopertive\}}. 
+The URL location is managed by KTH (i.e. it is a local Swedish URL) in the format of  \texttt{\small http://civis.proj.kth.se/}\textit{\{unique-link-of-a-housing-coopertive\}}. Energy managers receive the same URL for their housing cooperative but via email. 
 
-\item Through the URL, a user can reach a YouPower (Swedish user) sign up page that in addition to the inquiry of standard user information also asks for a unique identifier which allows to identify the user's household (and hence the associated energy data) with the user's permission. 
+\item For housing cooperatives that manage their own apartment level energy data (i.e. own the apartment level energy meters), the user is provided with a unique code on the flyer that they enter to link their account to the household energy data. Users from housing cooperatives that do not own the apartment level energy meters are asked to enter information from their energy bill, and the flyer specifies where on the bill they can find that information. Energy managers similarly provide information from the housing cooperative energy bill to create housing cooperative level accounts.
 
-This is similar to but different from the Italian process where Italian test site users get their \textit{ContactID} and \textit{TestbedID} beforehand. The Swedish process uses a unique ID of a user's electricity bill to identify different households. (Each user of a household still can register a separate user account at YouPower.) At the Swedish sign up page, there are also descriptions explaining how users can look up their IDs (which might be different for different housing cooperatives). 
+\item On the sign-up page (see Figure \ref{fig:signup_s}), the user is asked to fill in email address, name and password to create an account (compulsory information). It is also possible to add household information (optional) about the size of the apartment and number of adults (18 years and above) and children (below 18 years) in the household. The name of the housing cooperative is prefilled. For energy managers, household information is only needed in the cases where the housing cooperatives also have household accounts (at present only applicable for two housing cooperatives).
 
-\item The Swedish sign up page then asks for the user's household information, e.g. ...??? . 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.45\linewidth]{img/signup_s.png}
+	\caption{Sign-up page Swedish test site.}
+	\label{fig:signup_s}
+\end{figure}
 
-\item After the registration, the page suggests the user to invite other household members via email.
+\item By creating an account, the user consents to CIVIS using the data in the app for research purposes. After completing the form, the user is directed to the YouPower app. Energy managers are given editing rights and can choose to add an email address to the energy contact person in the cooperative, update information about the cooperative (number of apartments, type of ventilation etc.) and add energy reduction actions that the cooperative has taken.
 
-\item At the end of the process, the user is directed to the housing cooperative view of the YouPower application. 
+\item The flyer recommends the user to use the webapp on a mobile phone and it also gives instructions for how to create a link to the app on the phone's home screen.
 
 \end{enumerate}
 
