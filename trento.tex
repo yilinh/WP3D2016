@@ -1,12 +1,13 @@
 \subsubsection{Energy Awareness at Individual and Collective Levels}
 \label{sec:energydata}
 
-This part of the application is designed and developed to enable an informed approach to ``fair energy use'' by making people aware of their
+This part of the application is designed and developed to enable an informed approach to `fair energy use'\footnote{Simply understood as people using energy while
+being conscious of their individual energy footprint and the resulting impacts.} by making people aware of their
 energy behaviors in individual and collective terms. Indeed, it includes means for users to visualize in an easily
 understandable and actionable way a specific set of energy measurements, simple analytics and a time-of-use (ToU) signal.
 
 The access point for this part of the app is the ``Energy Data'' navigation tab (Figure \ref{fig:tab}). This tab gives access to an
-overview of the various functionalities and visualizations of specific information: ``Energy Meteo'', Visualization of consumption and production data (real time and historical),
+overview of the various functionalities and visualizations of specific information: ``Energy Meteo'', visualization of consumption and production data (real time and historical),
 ``Comparisons'' data.
 
 There are three main categories of information provided through this part of the app:
@@ -24,7 +25,7 @@ There are three main categories of information provided through this part of the
 \caption{Navigation tab with access to the feature for energy awareness: ``Energy Data''}\label{fig:tab}
 \end{figure}
 
-Although the direct impact of these kind of information can be debated -- reported reductions ranging from 2\% to 20+\% \citep{eea_report} and the fact the their medium and
+Although the direct impact of these kind of information can be debated -- reported reductions ranging from 2\% to 20\% \citep{eea_report} and the fact the their medium and
 long-term implications received some criticisms (with particular regards to normative ``eco-feedback''~\citep{Strengers2012,Cakici2014}), this part of the app is in-line with the needs emerged from
 the pilot sites and the project activities\footnote{Requirements analyzed as reported in Deliverable 3.1. Design concept validated as reported in Deliverable 3.2.}.
 It also addresses the fact that improvements of dwellers' energy awareness remain a necessary condition towards the long-term adoption of more sustainable behaviors,
@@ -34,9 +35,13 @@ well defined individual and collective efforts.
 
 
 \paragraph{``Energy Meteo'': the Time-of-Use (ToU) signal} 
-It is designed to leverage load elasticity for maximizing self-consumption, with the twofold effect of optimizing usage of locally-installed RESs and minimizing dependency from energy markets. This means that electric loads shall be shifted to periods of time characterized by high local production from renewable energy sources.
-It provides users with a clear indication of the actual status of the local grid: \textit{green smilies} signal slots when local production exceeds demand; \textit{red smilies} highlight slots
-when demand exceeds local production\footnote{See Deliverable 4.2 \textbf{[NB: VERIFY!!]}, for more details on the technical design and implementation of the predictive model of the ToU signal.}.
+This feature is designed to leverage load elasticity for maximizing Energy Cooperatives' self-consumption.
+It has the twofold effect of optimizing usage of RESs installed by the Energy Cooperatives and minimizing their dependency from national energy grid.
+Concrete goal of this feature is to support shifts of electric consumption loads to time-periods characterized by high local production from renewable energy sources.
+Therefore, Energy Meteo provides users with a clear indications on the actual status of the local grid and a 30-hours forecast\footnote{Appendix B, in CIVIS Deliverable 4.3 \textit{Energy ICT Platform - Platform Enablers}, describes in details the technical design and implementation for the predictive model
+that is the basis of the Time-of-Use signal and the forecast.}
+-- \textit{green smilies} signal slots when local production exceeds demand; \textit{red smilies} highlight slots when demand exceeds local
+production.
 
 \begin{figure}
       \begin{center}
@@ -57,7 +62,9 @@ The ToU signal is provided in two distinct ways:
 \begin{description}
  \item[Current.] It is available on the main screen (Figure \ref{fig:overview-tou}-1) and it indicates whether \textit{present} moment is a good (`green smiley') or bad moment (`red smiley')
  to consume locally produced electricity.
- \item[Forecast.] It is available by clicking on ``Energy Meteo'' field and it provides a detailed overview of the local grid conditions, forecasted in 3-hours time-slots, for the forthcoming 30 hours (Figure \ref{fig:overview-tou}-2). A new forecast is generated every 24 hours.
+ \item[Forecast.] It is available by clicking on ``Energy Meteo'' field and it provides a detailed overview of the local grid conditions, forecasted in 3-hours time-slots, for the forthcoming 30 hours (Figure \ref{fig:overview-tou}-2). A new forecast is generated every 24 hours\footnote{From the point of view of interaction with backend, this visualization relies on the
+ service hosted on the WP3 cloud platform which exposes the signal forecasts at the specific addresses \url{http://217.77.95.103/api/tou/sanlorenzo}, \url{http://217.77.95.103/api/tou/storo},
+ \url{http://217.77.95.103/api/tou/sanlorenzo/current}, \url{http://217.77.95.103/api/tou/storo/current}.}
 \end{description}
 
 
@@ -136,7 +143,7 @@ There are two type of comparisons that can be visualized through YouPower:
 \begin{description}
  \item[Consumption distribution on ToU signals] It shows a cumulative and progressive distribution of consumption between the green and red ToU signals.
  On the top part it shows the individual household chart, while on the bottom, the community\footnote{In this case community refers to the registered users who 
- are served by the same Energy cooperative through the same local distribution network.} total distribution. This view is a static one and is progressively updated on a weekly basis. The descriptive label for the chart clearly highlights the reference period considered.
+ are served by the same Energy Cooperative through the same local distribution network.} total distribution. This view is a static one and is progressively updated on a weekly basis. The descriptive label for the chart clearly highlights the reference period considered.
  \item[Consumption profile benchmark] It provides users with a benchmark\footnote{While in principle homogeneous groups of users could be identified to make the comparison more sound, this requires data (household composition, size of dwelling, type and number of appliances preset, thermal isolation \ldots) which are not currently available for the vast majority of the users engaged in the pilot.
  Furthermore, the heterogeneity and limited number of users involved would not allow to form meaningful groups for creating sound averages and benchmarking. For this reason the simple community average is used as a benchmark.} of consumption profile -- \textit{load curve}. It provides two graphs. At the top part of the screen the load curves are shown as average of households enrolled by the two Consortia.
  At the bottom part, household's load curve is compared with the average and the total of the related Consortium. These information are available only at a daily level. Therefore, users have to select the day (available starting from the previous day and backwards) for which they want to visualize such benchmarks
