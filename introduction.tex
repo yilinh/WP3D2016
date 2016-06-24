@@ -13,6 +13,8 @@ D3.3) Final field tested Integrated Energy System: Output of T3.1-5; Based on in
 The 3rd year's project activities continued and completed  the design and development of the CIVIS software platform \textit{YouPower}\footnote{\url{http://civis.tbm.tudelft.nl/} or \url{https://app.civisproject.eu/}}, 
 expanding upon the 2nd year's result reported in D3.2 \citep{Huang2015c}. 
 %
+As stated in D3.2, the CIVIS platform is composed of two parts (see Figure~\ref{fig:platform}): 
+% 
 \begin{figure}[h!]
 \begin{center}\footnotesize
 	\includegraphics[width=.85\textwidth]{img/civis_platform_overview.pdf}\\
@@ -21,7 +23,6 @@ expanding upon the 2nd year's result reported in D3.2 \citep{Huang2015c}.
 \end{center}
 \end{figure}
 % 
-As stated in D3.2, the CIVIS platform is composed of two parts (see Figure~\ref{fig:platform}): 
 the services provided by the CIVIS back-end, and the CIVIS front-end application that users directly interact with. 
 %
 To this end, WP4 focuses on the system level ICT services that deal with the energy data and its collection through the smart meters and sensors installed at the Swedish and Italian test sites (see D4.3 for more details). 
@@ -37,11 +38,21 @@ The final results are presented and discussed as a whole for readability and use
 We also present the user registration processes (Sec.~\ref{sec:reg}) that are tailored for the Swedish and Italian test sites, and give a detailed description of the management and the setup of the YouPower application (Sec.~\ref{sec:setup}). The contribution of the tasks in WP3 are summarized\footnote{As stated in the 2nd year's technical review report: \textit{Task 3.5 is practically abandoned as indirectly mentioned in D3.2 (pp.~38) and verbally confirmed
 during the review meeting.} T3.5 is therefore not included in Sec.~\ref{sec:tasks}.} (Sec.~\ref{sec:tasks}). 
 
-In the 3rd year of CIVIS, WP3 completed the design and development of YouPower. A large part of Action Suggestion (Sec. \ref{sec:action}) was completed during the 2nd year. About half of the Housing Cooperative part (Sec. \ref{sec:brf}) was completed in the 3rd year. The majority of the Energy Awareness part (Sec. \ref{sec:energydata}) was completed in the 3rd year. 
-All functionalities of the YouPower platform are reported and discussed in this report. YouPower is currently being deployed and tested at Stockholm (Sweden) and Trento (Italy) test sites respectively according to the local context. YouPower usage data is being collected --- the CIVIS project committed to continuing the YouPower data collection (keep the servers running) for 6 months after the end of the project as discussed during the 2nd year's review meeting in Brussels. 
+In the 3rd year of CIVIS, WP3 completed the design and development of YouPower. A large part of Action Suggestion (Sec. \ref{sec:action}) was completed during the 2nd year. About half of the Housing Cooperative part (Sec. \ref{sec:brf}) was completed in the 2nd year. The majority of the Energy Awareness part (Sec. \ref{sec:energydata}) was completed in the 3rd year. 
+All functionalities of the YouPower platform are reported and discussed in this report. YouPower is currently deployed and tested at Stockholm (Sweden) and Trento (Italy) test sites respectively according to the local context. YouPower usage data is being collected --- the CIVIS project committed to continuing the YouPower data collection (keep the servers running) for 6 months after the end of the project as discussed during the 2nd year's review meeting in Brussels. 
 
+From an end-user's perspective, anyone (also those outside of the test sites) can sign up and use the YouPower application. 
+The Action Suggestion part is ready to be used as-is (see Sec.~\ref{sec:action} for details). The Housing Cooperative part is applicable to those who live in countries with concepts such as housing cooperatives or owner associations, and have the required data of housing cooperatives, cooperative energy consumption and actions (see Sec.~\ref{sec:brf} for details). The Energy Awareness part is applicable to those who have energy data at the required levels and/or interested in load-shifting according to local productions (see Sec.~\ref{sec:energydata} for details). 
+
+From a developer and/or intervention designer's perspective, YouPower can be reused, extended and adapted to allow for a multitude of applications and different levels of integrations related to energy conservation/load-shifting interventions. 
 YouPower software is open source and will remain so under the Apache v.2 License\footnote{\url{https://github.com/CIVIS-project/YouPower/blob/master/LICENSE}}. It has  an online repository at GitHub\footnote{YouPower: \url{https://github.com/CIVIS-project/YouPower/}; the CIVIS project: \url{https://github.com/CIVIS-project/}.}. 
-The backend API documentation is aslo available online\footnote{\url{http://civis.tbm.tudelft.nl/apidoc/}}. The platform is designed with different composable packages allowing for flexible and extensible integration. The packages are available for any interested party to be reused, modified, and extended under the Apache v.2 License. As requested during the 2nd year's review meeting, the YouPower website is also updated to provide more up-to-date information of the platform to attract more users and increase visibility. Details of the update is not reported in this document but can be found at the project website\footnote{\url{https://app.civisproject.eu/}}.
+The backend API documentation is available online\footnote{\url{http://civis.tbm.tudelft.nl/apidoc/}}. 
+% 
+The platform is designed with different composable packages allowing for flexible and extensible integration. The packages are available for any interested party to be reused, modified, and extended under the Apache v.2 License. 
+
+As requested during the 2nd year's review meeting, the YouPower website is updated to provide  up-to-date information of the platform to attract more users and to increase visibility. Details of the update can be found at the project website\footnote{\url{https://app.civisproject.eu/}}. The description of the management and the setup of the YouPower application discussed in Sec.~\ref{sec:setup} is also available on the project website.
+
+
 
 %The authentication of user sign up and login to an EnergyUP account is managed by WP3 services. A user may also choose to link his or her energy data, additional authentication is required. 
 
