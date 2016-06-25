@@ -1,11 +1,11 @@
 \subsubsection{Energy Awareness at Individual and Collective Levels}
 \label{sec:energydata}
 
-This part of the application is designed and developed to enable an informed approach to `fair energy use'\footnote{Simply understood as people using energy while
+This part of the application is designed and developed to enable an informed approach to ``fair energy use''\footnote{Simply understood as people using energy while
 being conscious of their individual energy footprint and the resulting impacts.} by making people aware of their
 energy behaviors in individual and collective terms.
-
-Indeed, it includes means for users to visualize in an easily
+%
+It includes means for users to visualize in an easily
 understandable and actionable way a specific set of energy measurements, simple analytics and a time-of-use (ToU) signal.
 From a general point of view, this part of the app is meant to support the collective demand side management
 action that is described within the project use case\footnote{To fully realize such use case, the deployment of the external service ``Participatory Budgeting portal''
@@ -19,7 +19,7 @@ overview of the various functionalities and visualizations of specific informati
 
 There are three main categories of information provided through this part of the app:
 \begin{itemize}
- \item Time of use signal
+ \item ToU signal
  \item Visualization of real time and historical data (individual level)
  \item Comparative visualizations (collective level)
 \end{itemize}
@@ -66,7 +66,7 @@ that is the basis of the Time-of-Use signal and the forecast.} \textit{green smi
 
 The ToU signal is provided in two distinct ways:
 \begin{description}
- \item[Current.] It is available on the main screen (Figure \ref{fig:overview-tou}-1) and it indicates whether \textit{present} moment is a good (`green smiley') or bad moment (`red smiley')
+ \item[Current.] It is available on the main screen (Figure \ref{fig:overview-tou}-1) and it indicates whether \textit{present} moment is a good (``green smiley'') or bad moment (``red smiley'')
  to consume locally produced electricity.
  \item[Forecast.] It is available by clicking on ``Energy Meteo'' field and it provides a detailed overview of the local grid conditions, forecasted in 3-hours time-slots, for the forthcoming 30 hours (Figure \ref{fig:overview-tou}-2). A new forecast is generated every 24 hours\footnote{From the point of view of interaction with back-end, this visualization relies on the
  service hosted on the WP3 platform which exposes the signal forecasts at the specific addresses \url{http://217.77.95.103/api/tou/sanlorenzo}, \url{http://217.77.95.103/api/tou/storo},
@@ -99,7 +99,7 @@ These visualizations provide meters for:
  \item[Energy.] It appears at the top part of the screen and it accounts the most recent 6 minutes monitored.
  This information is graphically shown through the 'meter' and also displayed in numbers for an easier reading.
  \item[Power.] It appears at the bottom part of the screen and it provides instant measurement\footnote{For technical reasons and depending on several environmental factors (\textit{e.g.} households connectivity for transfer of monitored data) there may be up to approximately 2 minutes delay between the actual power measured and the data displayed through You Power.}.
- This information is graphically shown through the 'meter' and also displayed in numbers for an easier reading.
+ This information is graphically shown through the ``meter'' and also displayed in numbers for an easier reading.
 \end{description}
 
 
@@ -128,7 +128,7 @@ Information about historical data are available both for household and appliance
  \item[Appliance.] It provides a detailed view of the consumption patterns for the selected appliance. Visualized appliances are the ones equipped with smart plugs. 
 \end{description}
 Selection of data ranges are mandatory for these visualizations. They must be set by users at two different places: in the ``Energy Data'' main screen for the \textit{Household} category;
-in the `light-bulb' sub-view for the \textit{Appliance} one, which is accessible from the top level bar.
+in the ``light-bulb'' sub-view for the \textit{Appliance} one, which is accessible from the top level bar.
 
 
 \paragraph{Visualization of comparisons} 

@@ -22,7 +22,7 @@ Task 3.1 works in close cooperation with WP5 to explore community management, wh
 This task was carried out between the last quarter of 2014 and the first quarter of 2015.
 The goal was to provide a method to process individual electricity consumption
 data in order to define a set of features that can characterize the behavioral patterns of each
-consumer, and a way to group similar consumers together. The process devised can be summarized
+consumer, and a way to group similar consumers together. The features extracted from individual consumers' data serve the purpose of describing distinguishing patterns of consumption. Examples thereof are average daily consumption, peak consumption, average daily peak hour, average peak day, and so on. In this way each consumer is characterized by a set of measurements derived from its consumption data. Next, a method to group together users that are similar with respect to the extracted features is constructed.  The process devised can be summarized
 as follows:
 
 \begin{enumerate} 
@@ -30,7 +30,7 @@ as follows:
 
 \item Energy data is stored into a MongoDB database.
 
-\item The data is cleaned. In particular, missing data are detected and, where possible, interpolated. Outliers are detected and substituted with interpolated data. A report with all the modifications performed on
+\item The data is cleaned. In particular, missing data are detected and, where possible, interpolated. Outliers are detected and substituted with interpolated data.  Outlier detection and management is a standard procedure in data pre-processing. As outliers can easily distort measurements, it has been decided to substitute them with interpolated data. A report with all the modifications performed on
 data is produced. 
 
 \item Features are extracted from each individual energy consumption dataset. Examples of such
